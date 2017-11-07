@@ -1,0 +1,139 @@
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #211E21;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  height: 100%;
+  width: 90%;
+  margin: auto;
+}
+
+p {
+  font-style: italic;
+}
+
+header {
+  height: 100px;
+  text-align: center;
+  padding-bottom: 30px;
+  grid-area: header;
+}
+.item-a {
+  grid-area: main;
+  justify-content: center;
+}
+.item-b {
+  grid-area: sidebar;
+  justify-content: center;
+}
+footer {
+  display: block;
+  margin: auto;
+  width: 80%;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  text-align: center;
+  font-size: 12px;
+
+}
+
+/*Color Display*/
+.color-display {
+  margin: auto;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-color: #7FFFD4;
+  transition: transform 0.5s ease;
+  box-shadow: inset  -1px -1px 30px rgba(0,0,0,0.9);
+  -moz-box-shadow: inset  -1px -1px 30px rgba(0,0,0,0.9);
+  -webkit-box-shadow: inset  -1px -1px 30px rgba(0,0,0,0.9);
+}
+.color-display:hover {
+  transform: scale(1.05);
+}
+
+/*Controll Display*/
+.container-controll {
+  margin: auto;
+  text-align: center;
+}
+
+/*List Styles*/
+ul {
+  padding-left: 0;
+}
+li {
+  list-style: none;
+  text-align: center;
+  padding-top: 10px;
+}
+
+/*Button Styles*/
+button {
+ background-color: #F3F6F4;
+ font-family: 'Raleway', sans-serif;
+ font-size: 20px;
+ padding: 5px 30px;
+ margin: 0 auto 30px auto;
+ width: 80%;
+ display: block;
+ border-width: 0;
+ border-radius: 5px;
+ box-shadow: inset  1px 1px 20px rgba(0,0,0,0.5);
+ -moz-box-shadow: inset  1px 1px 20px rgba(0,0,0,0.5);
+ -webkit-box-shadow: inset  1px 1px 20px rgba(0,0,0,0.5);
+}
+
+button:hover {
+  transform: scale(1.02);
+  font-size: 22px;
+  cursor: pointer;
+  margin-bottom: 28px;
+}
+
+button:focus {
+  outline: 0;
+}
+
+/*----- MEDIA QUERIES -----*/
+
+/* Tablets */
+@media only screen and (min-width : 480px) {
+  body,
+  footer {
+    width: 60%;
+  }
+}
+/* Desktops and laptops */
+@media only screen and (min-width : 1024px) {
+  body {
+    width: 80%;
+    background-color: #211E21;
+  }
+  header {
+    height: 200px;
+  }
+  footer {
+    width: 80%;
+  }
+  .container {
+    display: grid;
+
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "header header"
+      "main sidebar";
+  }
+}
