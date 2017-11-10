@@ -4,6 +4,10 @@ const btnStart = document.getElementById('btn-start');
 const btnStop = document.getElementById('btn-stop');
 const rgbValue = document.getElementById('rgb-value');
 const hexValue = document.getElementById('hex-value');
+const year = document.getElementById('year');
+
+// Add current year to copyright in footer
+year.innerHTML = new Date().getFullYear();
 
 // Change color function
 function changeColor() {
@@ -29,7 +33,6 @@ function changeColor() {
     // Hexidecimal color value
     hexValue.innerHTML = 'HEX ' + rgbaToHex(ranNum1, ranNum2, ranNum3).toUpperCase();
 }
-
 
 
 // Event Listener on btnRandom
